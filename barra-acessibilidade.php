@@ -55,12 +55,12 @@ function amv_render_plugin_image( $filename, $args = array() ) {
     if ( ! empty( $args['class'] ) ) {
         $attributes[] = 'class="' . esc_attr( $args['class'] ) . '"';
     }
-    
-    if ( ! empty( $args['id'] ) ) {
+      if ( ! empty( $args['id'] ) ) {
         $attributes[] = 'id="' . esc_attr( $args['id'] ) . '"';
     }
     
-    echo '<img ' . implode( ' ', $attributes ) . '>';
+    // Since all individual attributes are already escaped, we can safely output the imploded string
+    echo '<img ' . implode( ' ', $attributes ) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 // --- CRIAÇÃO E REMOÇÃO DO MENU ---
@@ -277,9 +277,8 @@ add_action( 'wp_enqueue_scripts', function() {
 add_action( 'wp_footer', 'amv_inject_vlibras_container' );
 
 function amv_inject_vlibras_container() {
-    // Output HTML safely
-    echo wp_kses_post('<div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
-          </div>');
+    echo '<div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+      </div>';
 }
