@@ -89,20 +89,20 @@ function amv_render_settings_page() {
     $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
     ?>
     <div class="wrap">        <!-- Header com logo local -->
-        <h1 style="display:flex; align-items:center;">
-            <?php
-            // Exibe o logo de forma segura
-            echo wp_kses(
-                '<img src="' . esc_url( $logo ) . '" style="height:32px; margin-right:8px;" alt="' . esc_attr__('Softagon Sistemas Logo', 'barra-acessibilidade') . '">',
-                [ 'img' => [ 'src' => [], 'style' => [], 'alt' => [] ] ]
+        <h1 style="display:flex; align-items:center;">            <?php
+            // Exibe o logo usando função WordPress recomendada
+            printf(
+                '<img src="%s" style="height:32px; margin-right:8px;" alt="%s">',
+                esc_url( $logo ),
+                esc_attr__('Softagon Sistemas Logo', 'barra-acessibilidade')
             );
             ?>
             <?php esc_html_e('Acessibilidade Menu + VLibras', 'barra-acessibilidade'); ?>
-        </h1>
-        <p class="description">
+        </h1>        <p class="description">
             <?php 
             printf( 
-                __('Desenvolvido por %s', 'barra-acessibilidade'), 
+                /* translators: %s: Company name with link */
+                wp_kses( __('Desenvolvido por %s', 'barra-acessibilidade'), array( 'a' => array( 'href' => array(), 'target' => array() ) ) ), 
                 '<a href="https://www.softagon.com.br" target="_blank">Softagon Sistemas</a>' 
             ); 
             ?>
@@ -146,22 +146,25 @@ function amv_render_settings_page() {
             </form>
 
             <h2><?php esc_html_e('Preview do Menu', 'barra-acessibilidade'); ?></h2>
-            <p><?php esc_html_e('Aqui está como ficará o menu "Acessibilidade" após a criação ou reset:', 'barra-acessibilidade'); ?></p>
-            <?php
-            // Exibe o screenshot de forma segura
-            echo wp_kses(
-                '<img src="' . esc_url( $shot ) . '" style="max-width:100%; border:1px solid #ccc; padding:4px;" alt="' . esc_attr__('Print do Menu Acessibilidade', 'barra-acessibilidade') . '">',
-                [ 'img' => [ 'src' => [], 'style' => [], 'alt' => [] ] ]
+            <p><?php esc_html_e('Aqui está como ficará o menu "Acessibilidade" após a criação ou reset:', 'barra-acessibilidade'); ?></p>            <?php
+            // Exibe o screenshot usando função WordPress recomendada
+            printf(
+                '<img src="%s" style="max-width:100%%; border:1px solid #ccc; padding:4px;" alt="%s">',
+                esc_url( $shot ),
+                esc_attr__('Print do Menu Acessibilidade', 'barra-acessibilidade')
             );
             ?>
 
         <!-- Conteúdo Personalização -->
         <?php elseif ( 'advanced' === $active_tab ) : ?>
             <h2><?php esc_html_e('Personalização de Itens', 'barra-acessibilidade'); ?></h2>
-            <p><?php esc_html_e('Para editar rótulos, URLs, CSS Classes e Atributos de título:', 'barra-acessibilidade'); ?></p>
-            <ol>
-                <li><?php printf(esc_html__('Vá em %s e selecione "Acessibilidade".', 'barra-acessibilidade'), '<strong>' . esc_html__('Aparência', 'barra-acessibilidade') . ' &rarr; ' . esc_html__('Menus', 'barra-acessibilidade') . '</strong>'); ?></li>
-                <li><?php printf(esc_html__('Clique em %s (canto superior direito) e marque:', 'barra-acessibilidade'), '<em>' . esc_html__('Opções da tela', 'barra-acessibilidade') . '</em>'); ?>
+            <p><?php esc_html_e('Para editar rótulos, URLs, CSS Classes e Atributos de título:', 'barra-acessibilidade'); ?></p>            <ol>
+                <li><?php 
+                /* translators: %s: Menu navigation path */
+                printf(esc_html__('Vá em %s e selecione "Acessibilidade".', 'barra-acessibilidade'), '<strong>' . esc_html__('Aparência', 'barra-acessibilidade') . ' &rarr; ' . esc_html__('Menus', 'barra-acessibilidade') . '</strong>'); ?></li>
+                <li><?php 
+                /* translators: %s: Screen options text */
+                printf(esc_html__('Clique em %s (canto superior direito) e marque:', 'barra-acessibilidade'), '<em>' . esc_html__('Opções da tela', 'barra-acessibilidade') . '</em>'); ?>
                     <ul>
                         <li><?php esc_html_e('Destino do link', 'barra-acessibilidade'); ?></li>
                         <li><?php esc_html_e('Atributo de título', 'barra-acessibilidade'); ?></li>
@@ -174,9 +177,10 @@ function amv_render_settings_page() {
             </ol>
 
         <!-- Conteúdo Sobre -->
-        <?php else : ?>
-            <h2><?php esc_html_e('Sobre este plugin', 'barra-acessibilidade'); ?></h2>
-            <p><?php printf(esc_html__('%s é um projeto open-source da %s.', 'barra-acessibilidade'), '<strong>' . esc_html__('Acessibilidade Menu + VLibras', 'barra-acessibilidade') . '</strong>', '<a href="https://www.softagon.com.br" target="_blank">Softagon Sistemas</a>'); ?></p>
+        <?php else : ?>            <h2><?php esc_html_e('Sobre este plugin', 'barra-acessibilidade'); ?></h2>
+            <p><?php 
+            /* translators: 1: Plugin name, 2: Company name with link */
+            printf(esc_html__('%s é um projeto open-source da %s.', 'barra-acessibilidade'), '<strong>' . esc_html__('Acessibilidade Menu + VLibras', 'barra-acessibilidade') . '</strong>', '<a href="https://www.softagon.com.br" target="_blank">Softagon Sistemas</a>'); ?></p>
             <p>
                 <?php esc_html_e('Versão:', 'barra-acessibilidade'); ?> <strong>1.2</strong><br>
                 <?php esc_html_e('Autor:', 'barra-acessibilidade'); ?> <strong>Softagon Sistemas</strong><br>
@@ -202,7 +206,7 @@ function amv_reset_menu() {
 
 // Link "Configurações" na lista de plugins
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), function( $links ) {
-    $settings_link = '<a href="' . admin_url( 'options-general.php?page=amv-settings' ) . '">' . __('Configurações', 'barra-acessibilidade') . '</a>';
+    $settings_link = '<a href="' . admin_url( 'options-general.php?page=amv-settings' ) . '">' . esc_html__('Configurações', 'barra-acessibilidade') . '</a>';
     array_unshift( $links, $settings_link );
     return $links;
 });

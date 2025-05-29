@@ -9,7 +9,7 @@ Stable tag: 1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Accessibility plugin that creates a Brazilian Accessibility menu with subitems (Contrast, Increase/Decrease font, Libras) and integrates the VLibras widget.
+Brazilian accessibility menu with contrast, font size controls, and VLibras integration for WordPress sites.
 
 == Description ==
 
