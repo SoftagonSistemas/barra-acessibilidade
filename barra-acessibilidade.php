@@ -1,4 +1,5 @@
-<?php
+<? * Plugin Name:     Acessibilidade Menu + VLibras
+ * Description:     Plugin da Softagon Sistemas que cria o menu "Acessibilidade" com subitens (Contraste, Aumentar fonte, Diminuir fonte, Libras) e integra o widget VLibras. Possui botão de reset em Configurações.
 /**
  * Plugin Name:     Acessibilidade Menu + VLibras
  * Plugin URI:      https://www.softagon.com.br
