@@ -90,9 +90,13 @@ function amv_render_settings_page() {
     ?>
     <div class="wrap">        <!-- Header com logo local -->
         <h1 style="display:flex; align-items:center;">
-            <img src="<?php echo esc_url( $logo ); ?>"
-                 style="height:32px; margin-right:8px;"
-                 alt="<?php esc_attr_e('Softagon Sistemas Logo', 'barra-acessibilidade'); ?>">
+            <?php
+            // Exibe o logo de forma segura
+            echo wp_kses(
+                '<img src="' . esc_url( $logo ) . '" style="height:32px; margin-right:8px;" alt="' . esc_attr__('Softagon Sistemas Logo', 'barra-acessibilidade') . '">',
+                [ 'img' => [ 'src' => [], 'style' => [], 'alt' => [] ] ]
+            );
+            ?>
             <?php esc_html_e('Acessibilidade Menu + VLibras', 'barra-acessibilidade'); ?>
         </h1>
         <p class="description">
@@ -143,9 +147,13 @@ function amv_render_settings_page() {
 
             <h2><?php esc_html_e('Preview do Menu', 'barra-acessibilidade'); ?></h2>
             <p><?php esc_html_e('Aqui está como ficará o menu "Acessibilidade" após a criação ou reset:', 'barra-acessibilidade'); ?></p>
-            <img src="<?php echo esc_url( $shot ); ?>"
-                 style="max-width:100%; border:1px solid #ccc; padding:4px;"
-                 alt="<?php esc_attr_e('Print do Menu Acessibilidade', 'barra-acessibilidade'); ?>">
+            <?php
+            // Exibe o screenshot de forma segura
+            echo wp_kses(
+                '<img src="' . esc_url( $shot ) . '" style="max-width:100%; border:1px solid #ccc; padding:4px;" alt="' . esc_attr__('Print do Menu Acessibilidade', 'barra-acessibilidade') . '">',
+                [ 'img' => [ 'src' => [], 'style' => [], 'alt' => [] ] ]
+            );
+            ?>
 
         <!-- Conteúdo Personalização -->
         <?php elseif ( 'advanced' === $active_tab ) : ?>
@@ -206,7 +214,9 @@ add_action( 'wp_enqueue_scripts', function() {
         body.modo-contraste { filter: invert(100%) !important; background: #000 !important; }
         body.modo-contraste img, body.modo-contraste video, body.modo-contraste iframe { filter: invert(100%) !important; }
     ");
-    wp_enqueue_script( 'amv-vlibras', 'https://vlibras.gov.br/app/vlibras-plugin.js', [], null, true );
+    // Use plugin version or a date string for cache busting
+    $plugin_version = '1.0.0'; // Update as needed
+    wp_enqueue_script( 'amv-vlibras', 'https://vlibras.gov.br/app/vlibras-plugin.js', [], $plugin_version, true );
     wp_add_inline_script( 'amv-vlibras', "
         jQuery(function($){
             new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -233,8 +243,9 @@ add_action( 'wp_enqueue_scripts', function() {
 add_action( 'wp_footer', 'amv_inject_vlibras_container' );
 
 function amv_inject_vlibras_container() {
-    echo '<div vw class="enabled">
+    // Output HTML safely
+    echo wp_kses_post('<div vw class="enabled">
             <div vw-access-button class="active"></div>
             <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
-          </div>';
+          </div>');
 }

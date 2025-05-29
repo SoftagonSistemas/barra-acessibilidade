@@ -1,15 +1,15 @@
-=== Acessibilidade Menu + VLibras ===
+=== Accessibility Menu + VLibras ===
 Contributors: softagon
 Donate link: https://www.softagon.com.br
-Tags: accessibility, vlibras, libras, contrast, font-size
+Tags: accessibility, vlibras, libras, contrast, font-size, menu, a11y
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.6
 Requires PHP: 7.4
 Stable tag: 1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Accessibility plugin that creates a Brazilian Accessibility menu with subitems (Contrast, Increase/Decrease font, Libras) and integrates the VLibras widget.
+Accessibility plugin that creates an "Accessibility" menu with subitems (Contrast, Increase/Decrease font, Libras) and integrates the VLibras widget.
 
 == Description ==
 
