@@ -1,16 +1,17 @@
 <? * Plugin Name:     Acessibilidade Menu + VLibras
- * Description:     Plugin da Softagon Sistemas que cria o menu "Acessibilidade" com subitens (Contraste, Aumentar fonte, Diminuir fonte, Libras) e integra o widget VLibras. Possui botão de reset em Configurações.
 /**
  * Plugin Name:     Acessibilidade Menu + VLibras
- * Plugin URI:      https://www.softagon.com.br
- * Description:     Plugin da Softagon Sistemas que cria o menu “Acessibilidade” com subitens (Contraste, Aumentar fonte, Diminuir fonte, Libras) e integra o widget VLibras. Possui botão de reset em Configurações.
+ * Plugin URI:      https://github.com/SoftagonSistemas/barra-acessibilidade/
+ * Description:     Cria o menu “Acessibilidade” com subitens (Contraste, Aumentar fonte, Diminuir fonte, Libras) e integra o widget VLibras. Reset em Configurações.
  * Version:         1.2
  * Author:          Softagon Sistemas
  * Author URI:      https://www.softagon.com.br
  * License:         GPLv2 or later
- * Text Domain:     barra-acessibilidade
+ * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:     acessibilidade-menu-vlibras
  * Domain Path:     /languages
  */
+
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
