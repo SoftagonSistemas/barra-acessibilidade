@@ -5,7 +5,7 @@ Tags: accessibility, vlibras, libras, contrast, font-size, menu, a11y
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.2
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,7 +105,7 @@ O plugin suporta internacionalização. Crie arquivos `.po/.mo` na pasta `/langu
 
 == Changelog ==
 
-= 1.2 =
+= 1.4 =
 * Adicionado suporte completo à internacionalização
 * Melhoradas práticas de segurança com sanitização
 * Criado arquivo uninstall.php para limpeza
@@ -130,7 +130,7 @@ O plugin suporta internacionalização. Crie arquivos `.po/.mo` na pasta `/langu
 
 == Upgrade Notice ==
 
-= 1.2 =
+= 1.4 =
 Esta versão adiciona suporte completo à internacionalização e melhora a segurança. Recomendada para todos os usuários.
 
 = 1.1 =

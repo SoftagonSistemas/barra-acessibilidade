@@ -4,7 +4,7 @@ Tags: accessibility, vlibras, libras, contrast, font-size, menu, a11y
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.2
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,7 +39,7 @@ The plugin does not collect personal data. VLibras is a government service and f
 
 == Changelog ==
 
-= 1.2 =
+= 1.4 =
 * Added full internationalization support.
 * Improved security and sanitization.
 * Added uninstall.php for clean removal.
@@ -57,5 +57,5 @@ The plugin does not collect personal data. VLibras is a government service and f
 
 == Upgrade Notice ==
 
-= 1.2 =
+= 1.4 =
 Adds internationalization and security improvements. Recommended for all users.

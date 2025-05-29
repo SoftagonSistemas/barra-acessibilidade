@@ -1,14 +1,14 @@
-<? * Plugin Name:     Acessibilidade Menu + VLibras
+<?php
 /**
  * Plugin Name:     Acessibilidade Menu + VLibras
  * Plugin URI:      https://github.com/SoftagonSistemas/barra-acessibilidade/
  * Description:     Cria o menu “Acessibilidade” com subitens (Contraste, Aumentar fonte, Diminuir fonte, Libras) e integra o widget VLibras. Reset em Configurações.
- * Version:         1.2
+ * Version:         1.4
  * Author:          Softagon Sistemas
  * Author URI:      https://www.softagon.com.br
  * License:         GPLv2 or later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:     acessibilidade-menu-vlibras
+ * Text Domain:     barra-acessibilidade
  * Domain Path:     /languages
  */
 
@@ -214,7 +214,7 @@ function amv_render_settings_page() {    // Verificação de permissões
             /* translators: 1: Plugin name, 2: Company name with link */
             printf(esc_html__('%1$s é um projeto open-source da %2$s.', 'barra-acessibilidade'), '<strong>' . esc_html__('Acessibilidade Menu + VLibras', 'barra-acessibilidade') . '</strong>', '<a href="https://www.softagon.com.br" target="_blank">Softagon Sistemas</a>'); ?></p>
             <p>
-                <?php esc_html_e('Versão:', 'barra-acessibilidade'); ?> <strong>1.2</strong><br>
+                <?php esc_html_e('Versão:', 'barra-acessibilidade'); ?> <strong>1.4</strong><br>
                 <?php esc_html_e('Autor:', 'barra-acessibilidade'); ?> <strong>Softagon Sistemas</strong><br>
                 <?php esc_html_e('Site:', 'barra-acessibilidade'); ?> <a href="https://www.softagon.com.br" target="_blank">www.softagon.com.br</a>
             </p>

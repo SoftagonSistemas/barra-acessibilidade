@@ -2,7 +2,7 @@
 # Copyright (C) 2025 Softagon Sistemas
 msgid ""
 msgstr ""
-"Project-Id-Version: Acessibilidade Menu + VLibras 1.2\n"
+"Project-Id-Version: Acessibilidade Menu + VLibras 1.4\n"
 "Report-Msgid-Bugs-To: https://www.softagon.com.br\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"

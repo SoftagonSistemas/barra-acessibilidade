@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Acessibilidade Menu + VLibras package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Acessibilidade Menu + VLibras 1.2\n"
+"Project-Id-Version: Acessibilidade Menu + VLibras 1.4\n"
 "Report-Msgid-Bugs-To: https://www.softagon.com.br\n"
 "POT-Creation-Date: 2025-05-29 12:00+0000\n"
 "MIME-Version: 1.0\n"

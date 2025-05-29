@@ -5,7 +5,7 @@ Tags: accessibility, vlibras, libras, contrast, font-size
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,7 +102,7 @@ The plugin supports internationalization. Create `.po/.mo` files in the `/langua
 
 == Changelog ==
 
-= 1.2 =
+= 1.4 =
 * Added full internationalization support
 * Improved security practices with sanitization
 * Created uninstall.php for cleanup
@@ -127,7 +127,7 @@ The plugin supports internationalization. Create `.po/.mo` files in the `/langua
 
 == Upgrade Notice ==
 
-= 1.2 =
+= 1.4 =
 This version adds full internationalization support and improves security. Recommended for all users.
 
 = 1.1 =
