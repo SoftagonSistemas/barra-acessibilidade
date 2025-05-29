@@ -1,4 +1,4 @@
-=== Acessibilidade Menu + VLibras ===
+=== Accessibility Menu + VLibras ===
 Contributors: softagon
 Donate link: https://www.softagon.com.br
 Tags: accessibility, vlibras, libras, contrast, font-size, menu, a11y
@@ -9,145 +9,142 @@ Stable tag: 1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin de acessibilidade que cria menu "Acessibilidade" com subitens (Contraste, Aumentar/Diminuir fonte, Libras) e integra o widget VLibras.
+Accessibility plugin that creates an "Accessibility" menu with subitems (Contrast, Increase/Decrease font, Libras) and integrates the VLibras widget.
 
 == Description ==
 
-O **Acessibilidade Menu + VLibras** é um plugin desenvolvido pela Softagon Sistemas que melhora a acessibilidade do seu site WordPress criando automaticamente um menu de navegação "Acessibilidade" com funcionalidades essenciais.
+**Accessibility Menu + VLibras** is a plugin developed by Softagon Sistemas to improve your WordPress site's accessibility by automatically creating an "Accessibility" navigation menu with essential features.
 
-### Funcionalidades Principais
+### Main Features
 
-* **Menu Acessibilidade automático** - Cria menu pai "Acessibilidade" e 4 subitens
-* **Contraste** - Inverte as cores da página para melhor visibilidade
-* **Aumentar Fonte** - Aumenta o tamanho da fonte em 10%
-* **Diminuir Fonte** - Diminui o tamanho da fonte em 10%
-* **Libras** - Integra o widget VLibras do governo brasileiro
-* **Página de configurações** - Painel administrativo em Configurações → Acessibilidade
-* **Botão Reset** - Permite recriar o menu ao estado padrão
-* **Multilíngue** - Suporte completo à internacionalização
+* **Automatic Accessibility Menu** – Creates a parent "Accessibility" menu and 4 subitems
+* **Contrast** – Inverts page colors for better visibility
+* **Increase Font** – Increases font size by 10%
+* **Decrease Font** – Decreases font size by 10%
+* **Libras** – Integrates the official Brazilian government VLibras widget
+* **Settings Page** – Admin panel in Settings → Accessibility
+* **Reset Button** – Allows you to recreate the menu to its default state
+* **Multilingual** – Full internationalization support
 
-### Classes CSS Disponíveis
+### Available CSS Classes
 
-O plugin adiciona automaticamente as seguintes classes CSS aos itens do menu:
+The plugin automatically adds the following CSS classes to menu items:
 
-* `.js-contraste` - Para alternar o modo de alto contraste
-* `.js-aumentar` - Para aumentar o tamanho da fonte
-* `.js-diminuir` - Para diminuir o tamanho da fonte  
-* `.js-vlibras` - Para ativar o widget VLibras
+* `.js-contraste` – Toggle high contrast mode
+* `.js-aumentar` – Increase font size
+* `.js-diminuir` – Decrease font size
+* `.js-vlibras` – Activate VLibras widget
 
 ### VLibras Integration
 
-O plugin integra automaticamente o [VLibras](https://vlibras.gov.br/), ferramenta oficial do governo brasileiro para tradução de conteúdo em português para Libras (Língua Brasileira de Sinais).
+The plugin automatically integrates [VLibras](https://vlibras.gov.br/), the official Brazilian government tool for translating Portuguese content into Libras (Brazilian Sign Language).
 
-### Personalização
+**External Dependency Notice:**
+This plugin loads the VLibras widget, which is an external service provided by the Brazilian government. Please review the [VLibras Privacy Policy](https://www.gov.br/governodigital/pt-br/vlibras/politica-de-privacidade) for details on data handling by this service.
 
-Você pode personalizar os itens do menu através de:
-1. Aparência → Menus → Selecionar "Acessibilidade"
-2. Ativar "Opções da tela" para mostrar campos avançados
-3. Editar rótulos, URLs, classes CSS e atributos conforme necessário
+### Customization
+
+You can customize menu items via:
+1. Appearance → Menus → Select "Accessibility"
+2. Enable "Screen Options" to show advanced fields
+3. Edit labels, URLs, CSS classes, and attributes as needed
 
 == Installation ==
 
-### Instalação Automática
+### Automatic Installation
 
-1. Acesse o painel administrativo do WordPress
-2. Vá em Plugins → Adicionar Novo
-3. Pesquise por "Acessibilidade Menu VLibras"
-4. Clique em "Instalar Agora" e depois "Ativar"
+1. Go to the WordPress admin panel
+2. Navigate to Plugins → Add New
+3. Search for "Accessibility Menu VLibras"
+4. Click "Install Now" and then "Activate"
 
-### Instalação Manual
+### Manual Installation
 
-1. Faça o download do plugin
-2. Extraia o arquivo na pasta `/wp-content/plugins/`
-3. Ative o plugin através do menu Plugins no WordPress
-4. Acesse Configurações → Acessibilidade para configurar
+1. Download the plugin
+2. Extract the file to the `/wp-content/plugins/` directory
+3. Activate the plugin via the Plugins menu in WordPress
+4. Go to Settings → Accessibility to configure
 
-### Após a Instalação
+### After Installation
 
-1. O menu "Acessibilidade" será criado automaticamente
-2. Acesse Configurações → Acessibilidade para opções avançadas
-3. Adicione o menu "Acessibilidade" à sua localização de menu desejada
+1. The "Accessibility" menu will be created automatically
+2. Go to Settings → Accessibility for advanced options
+3. Add the "Accessibility" menu to your desired menu location
 
 == Frequently Asked Questions ==
 
-= O plugin funciona com qualquer tema? =
+= Does the plugin work with any theme? =
+Yes! The plugin works with any WordPress theme that supports standard navigation menus.
 
-Sim! O plugin funciona com qualquer tema do WordPress que suporte menus de navegação padrão.
+= How do I customize the button appearance? =
+You can add custom CSS for the classes `.js-contraste`, `.js-aumentar`, `.js-diminuir`, and `.js-vlibras` via the Customizer or your theme's CSS file.
 
-= Como personalizo a aparência dos botões? =
+= Is VLibras loaded on all pages? =
+Yes, the VLibras widget is automatically loaded on all frontend pages when the plugin is active.
 
-Você pode adicionar CSS personalizado para as classes `.js-contraste`, `.js-aumentar`, `.js-diminuir` e `.js-vlibras` através do Customizador ou arquivo CSS do tema.
+= How do I remove just one menu item? =
+Go to Appearance → Menus, select "Accessibility," and remove the desired items. Use the "Reset Menu" button in settings to restore all items.
 
-= O VLibras aparece em todas as páginas? =
+= Is the plugin LGPD/GDPR compliant? =
+The plugin does not collect personal data. VLibras is a government service and its privacy policy applies as per the official documentation.
 
-Sim, o widget VLibras é carregado automaticamente em todas as páginas do frontend quando o plugin está ativo.
-
-= Como removo apenas um item do menu? =
-
-Vá em Aparência → Menus, selecione "Acessibilidade" e remova os itens desejados. Use o botão "Resetar Menu" nas configurações para restaurar todos os itens.
-
-= O plugin é compatível com LGPD/GDPR? =
-
-O plugin não coleta dados pessoais. O VLibras é um serviço do governo brasileiro e suas políticas se aplicam conforme documentação oficial.
-
-= Como traduzir para outros idiomas? =
-
-O plugin suporta internacionalização. Crie arquivos `.po/.mo` na pasta `/languages/` ou use plugins de tradução como Loco Translate.
+= How do I translate to other languages? =
+The plugin supports internationalization. Create `.po/.mo` files in the `/languages/` folder or use translation plugins like Loco Translate.
 
 == Screenshots ==
 
-1. Menu "Acessibilidade" criado automaticamente no painel de menus
-2. Página de configurações em Configurações → Acessibilidade
-3. Aba "Geral" com botão de reset do menu
-4. Aba "Personalização" com instruções de customização
-5. Aba "Sobre" com informações do plugin
-6. Widget VLibras ativo no frontend
+1. Automatically created "Accessibility" menu in the menu panel
+2. Settings page in Settings → Accessibility
+3. "General" tab with menu reset button
+4. "Customization" tab with customization instructions
+5. "About" tab with plugin information
+6. VLibras widget active on the frontend
 
 == Changelog ==
 
 = 1.2 =
-* Adicionado suporte completo à internacionalização
-* Melhoradas práticas de segurança com sanitização
-* Criado arquivo uninstall.php para limpeza
-* Adicionadas traduções em inglês
-* Implementado text domain 'barra-acessibilidade'
-* Melhorado escape de dados com esc_html_e()
-* Adicionado LICENSE.txt GPLv2+
+* Added full internationalization support
+* Improved security practices with sanitization
+* Created uninstall.php for cleanup
+* Added English translations
+* Implemented text domain 'barra-acessibilidade'
+* Improved data escaping with esc_html_e()
+* Added LICENSE.txt GPLv2+
 
 = 1.1 =
-* Adicionada página de configurações com abas
-* Implementado botão "Resetar Menu" com nonce
-* Criadas seções Geral, Personalização e Sobre
-* Adicionado link "Configurações" na lista de plugins
-* Melhorada documentação inline
+* Added settings page with tabs
+* Implemented "Reset Menu" button with nonce
+* Created General, Customization, and About sections
+* Added "Settings" link in plugin list
+* Improved inline documentation
 
 = 1.0 =
-* Lançamento inicial
-* Criação automática do menu "Acessibilidade"
-* Integração com VLibras
-* Funcionalidades de contraste e ajuste de fonte
-* Hooks de ativação e desativação
+* Initial release
+* Automatic creation of "Accessibility" menu
+* VLibras integration
+* Contrast and font adjustment features
+* Activation and deactivation hooks
 
 == Upgrade Notice ==
 
 = 1.2 =
-Esta versão adiciona suporte completo à internacionalização e melhora a segurança. Recomendada para todos os usuários.
+This version adds full internationalization support and improves security. Recommended for all users.
 
 = 1.1 =
-Adiciona página de configurações avançadas e melhor controle do menu.
+Adds advanced settings page and better menu control.
 
 == Support ==
 
-Para suporte técnico, entre em contato:
+For technical support, contact:
 
 * **Site:** [Softagon Sistemas](https://www.softagon.com.br)
 * **Email:** contato@softagon.com.br
-* **Documentação VLibras:** [vlibras.gov.br](https://vlibras.gov.br/)
+* **VLibras Documentation:** [vlibras.gov.br](https://vlibras.gov.br/)
 
 == Privacy Policy ==
 
-Este plugin não coleta, armazena ou transmite dados pessoais dos usuários. A integração com VLibras está sujeita às políticas de privacidade do serviço governamental.
+This plugin does not collect, store, or transmit users' personal data. The VLibras integration is subject to the [VLibras Privacy Policy](https://www.gov.br/governodigital/pt-br/vlibras/politica-de-privacidade).
 
 == Development ==
 
-O código-fonte está disponível para contribuições e melhorias. Seguimos os padrões de codificação do WordPress e práticas de Clean Architecture.
+The source code is open for contributions and improvements. We follow WordPress coding standards and Clean Architecture practices.
