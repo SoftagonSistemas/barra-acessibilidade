@@ -1,0 +1,83 @@
+# Copyright (C) 2025 Softagon Sistemas
+# This file is distributed under the same license as the Acessibilidade Menu + VLibras package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Acessibilidade Menu + VLibras 1.2\n"
+"Report-Msgid-Bugs-To: https://www.softagon.com.br\n"
+"POT-Creation-Date: 2025-05-29 12:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: barra-acessibilidade.php
+msgid "Acessibilidade"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Contraste"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Aumentar fonte"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Diminuir fonte"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Libras"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Acessibilidade VLibras"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Acessibilidade Menu + VLibras"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Desenvolvido por %s"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Geral"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Personalização"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Sobre"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Menu resetado ao padrão!"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Resetar Menu"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Use este botão para apagar e recriar o menu \"Acessibilidade\" no estado padrão."
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Preview do Menu"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Aqui está como ficará o menu \"Acessibilidade\" após a criação ou reset:"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Print do Menu Acessibilidade"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Configurações"
+msgstr ""

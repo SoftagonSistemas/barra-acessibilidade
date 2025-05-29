@@ -1,0 +1,65 @@
+# English translation for Acessibilidade Menu + VLibras
+# Copyright (C) 2025 Softagon Sistemas
+msgid ""
+msgstr ""
+"Project-Id-Version: Acessibilidade Menu + VLibras 1.2\n"
+"Report-Msgid-Bugs-To: https://www.softagon.com.br\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Acessibilidade"
+msgstr "Accessibility"
+
+msgid "Contraste"
+msgstr "Contrast"
+
+msgid "Aumentar fonte"
+msgstr "Increase font"
+
+msgid "Diminuir fonte"
+msgstr "Decrease font"
+
+msgid "Libras"
+msgstr "Sign Language"
+
+msgid "Acessibilidade VLibras"
+msgstr "Accessibility VLibras"
+
+msgid "Acessibilidade Menu + VLibras"
+msgstr "Accessibility Menu + VLibras"
+
+msgid "Desenvolvido por %s"
+msgstr "Developed by %s"
+
+msgid "Geral"
+msgstr "General"
+
+msgid "Personalização"
+msgstr "Customization"
+
+msgid "Sobre"
+msgstr "About"
+
+msgid "Menu resetado ao padrão!"
+msgstr "Menu reset to default!"
+
+msgid "Resetar Menu"
+msgstr "Reset Menu"
+
+msgid "Use este botão para apagar e recriar o menu \"Acessibilidade\" no estado padrão."
+msgstr "Use this button to delete and recreate the \"Accessibility\" menu in its default state."
+
+msgid "Preview do Menu"
+msgstr "Menu Preview"
+
+msgid "Aqui está como ficará o menu \"Acessibilidade\" após a criação ou reset:"
+msgstr "Here's how the \"Accessibility\" menu will look after creation or reset:"
+
+msgid "Print do Menu Acessibilidade"
+msgstr "Accessibility Menu Screenshot"
+
+msgid "Configurações"
+msgstr "Settings"
