@@ -63,3 +63,33 @@ msgstr "Accessibility Menu Screenshot"
 
 msgid "Configurações"
 msgstr "Settings"
+
+msgid "Sobre este plugin"
+msgstr "About this plugin"
+
+msgid "%1$s é um projeto open-source da %2$s."
+msgstr "%1$s is an open-source project by %2$s."
+
+msgid "Versão:"
+msgstr "Version:"
+
+msgid "Autor:"
+msgstr "Author:"
+
+msgid "Site:"
+msgstr "Website:"
+
+msgid "Funcionalidades"
+msgstr "Features"
+
+msgid "Cria o menu-pai \"Acessibilidade\" e 4 subitens no WP Menu."
+msgstr "Creates the parent menu \"Accessibility\" and 4 sub-items in WP Menu."
+
+msgid "Integra o widget VLibras, contraste e ajuste de fonte."
+msgstr "Integrates VLibras widget, contrast and font adjustment."
+
+msgid "Enfileira automaticamente CSS e JS necessários."
+msgstr "Automatically enqueues necessary CSS and JS."
+
+msgid "Botão de reset para recriar o menu-padrão."
+msgstr "Reset button to recreate the default menu."

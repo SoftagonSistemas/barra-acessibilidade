@@ -22,6 +22,47 @@ function amv_load_textdomain() {
     load_plugin_textdomain( 'barra-acessibilidade', false, dirname( plugin_basename(__FILE__) ) . '/languages' );
 }
 
+// --- HELPER FUNCTIONS ---
+
+/**
+ * Output plugin asset image with proper WordPress escaping
+ * 
+ * @param string $filename The image filename in the assets directory
+ * @param array $args Optional arguments for the image tag
+ */
+function amv_render_plugin_image( $filename, $args = array() ) {
+    $defaults = array(
+        'alt' => '',
+        'style' => '',
+        'class' => '',
+        'id' => ''
+    );
+    
+    $args = wp_parse_args( $args, $defaults );
+    $image_url = esc_url( plugin_dir_url( __FILE__ ) . 'assets/' . $filename );
+    
+    $attributes = array();
+    $attributes[] = 'src="' . $image_url . '"';
+    
+    if ( ! empty( $args['alt'] ) ) {
+        $attributes[] = 'alt="' . esc_attr( $args['alt'] ) . '"';
+    }
+    
+    if ( ! empty( $args['style'] ) ) {
+        $attributes[] = 'style="' . esc_attr( $args['style'] ) . '"';
+    }
+    
+    if ( ! empty( $args['class'] ) ) {
+        $attributes[] = 'class="' . esc_attr( $args['class'] ) . '"';
+    }
+    
+    if ( ! empty( $args['id'] ) ) {
+        $attributes[] = 'id="' . esc_attr( $args['id'] ) . '"';
+    }
+    
+    echo '<img ' . implode( ' ', $attributes ) . '>';
+}
+
 // --- CRIAÇÃO E REMOÇÃO DO MENU ---
 
 function amv_create_menu() {
@@ -74,28 +115,20 @@ function amv_register_settings_page() {
 }
 add_action( 'admin_menu', 'amv_register_settings_page' );
 
-function amv_render_settings_page() {
-    // Verificação de permissões
+function amv_render_settings_page() {    // Verificação de permissões
     if ( ! current_user_can( 'manage_options' ) ) {
         wp_die( esc_html__( 'Você não tem permissão para acessar esta página.', 'barra-acessibilidade' ) );
     }
     
-    // URLs dos assets com escape
-    $base = plugin_dir_url( __FILE__ ) . 'assets/';
-    $logo = esc_url( $base . 'softagon-logo.png' );
-    $shot = esc_url( $base . 'menu-screenshot.png' );
-
     // Sanitização da tab ativa
     $active_tab = isset( $_GET['tab'] ) ? sanitize_key( $_GET['tab'] ) : 'general';
     ?>
-    <div class="wrap">        <!-- Header com logo local -->
-        <h1 style="display:flex; align-items:center;">            <?php
-            // Exibe o logo usando função WordPress recomendada
-            printf(
-                '<img src="%s" style="height:32px; margin-right:8px;" alt="%s">',
-                esc_url( $logo ),
-                esc_attr__('Softagon Sistemas Logo', 'barra-acessibilidade')
-            );
+    <div class="wrap">        <!-- Header com logo local -->        <h1 style="display:flex; align-items:center;">            <?php
+            // Exibe o logo usando função helper do plugin
+            amv_render_plugin_image( 'softagon-logo.png', array(
+                'alt' => __('Softagon Sistemas Logo', 'barra-acessibilidade'),
+                'style' => 'height:32px; margin-right:8px;'
+            ) );
             ?>
             <?php esc_html_e('Acessibilidade Menu + VLibras', 'barra-acessibilidade'); ?>
         </h1>        <p class="description">
@@ -143,16 +176,13 @@ function amv_render_settings_page() {
                            class="button button-primary"
                            value="<?php esc_attr_e('Resetar Menu', 'barra-acessibilidade'); ?>">
                 </p>
-            </form>
-
-            <h2><?php esc_html_e('Preview do Menu', 'barra-acessibilidade'); ?></h2>
+            </form>            <h2><?php esc_html_e('Preview do Menu', 'barra-acessibilidade'); ?></h2>
             <p><?php esc_html_e('Aqui está como ficará o menu "Acessibilidade" após a criação ou reset:', 'barra-acessibilidade'); ?></p>            <?php
-            // Exibe o screenshot usando função WordPress recomendada
-            printf(
-                '<img src="%s" style="max-width:100%%; border:1px solid #ccc; padding:4px;" alt="%s">',
-                esc_url( $shot ),
-                esc_attr__('Print do Menu Acessibilidade', 'barra-acessibilidade')
-            );
+            // Exibe o screenshot usando função helper do plugin
+            amv_render_plugin_image( 'menu-screenshot.png', array(
+                'alt' => __('Print do Menu Acessibilidade', 'barra-acessibilidade'),
+                'style' => 'max-width:100%; border:1px solid #ccc; padding:4px;'
+            ) );
             ?>
 
         <!-- Conteúdo Personalização -->
@@ -180,7 +210,7 @@ function amv_render_settings_page() {
         <?php else : ?>            <h2><?php esc_html_e('Sobre este plugin', 'barra-acessibilidade'); ?></h2>
             <p><?php 
             /* translators: 1: Plugin name, 2: Company name with link */
-            printf(esc_html__('%s é um projeto open-source da %s.', 'barra-acessibilidade'), '<strong>' . esc_html__('Acessibilidade Menu + VLibras', 'barra-acessibilidade') . '</strong>', '<a href="https://www.softagon.com.br" target="_blank">Softagon Sistemas</a>'); ?></p>
+            printf(esc_html__('%1$s é um projeto open-source da %2$s.', 'barra-acessibilidade'), '<strong>' . esc_html__('Acessibilidade Menu + VLibras', 'barra-acessibilidade') . '</strong>', '<a href="https://www.softagon.com.br" target="_blank">Softagon Sistemas</a>'); ?></p>
             <p>
                 <?php esc_html_e('Versão:', 'barra-acessibilidade'); ?> <strong>1.2</strong><br>
                 <?php esc_html_e('Autor:', 'barra-acessibilidade'); ?> <strong>Softagon Sistemas</strong><br>

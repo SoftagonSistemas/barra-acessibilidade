@@ -81,3 +81,43 @@ msgstr ""
 #: barra-acessibilidade.php
 msgid "Configurações"
 msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Sobre este plugin"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "%1$s é um projeto open-source da %2$s."
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Versão:"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Autor:"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Site:"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Funcionalidades"
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Cria o menu-pai \"Acessibilidade\" e 4 subitens no WP Menu."
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Integra o widget VLibras, contraste e ajuste de fonte."
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Enfileira automaticamente CSS e JS necessários."
+msgstr ""
+
+#: barra-acessibilidade.php
+msgid "Botão de reset para recriar o menu-padrão."
+msgstr ""
